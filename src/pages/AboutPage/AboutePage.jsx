@@ -96,7 +96,7 @@ const AboutPage = () => {
         </Typography>
 
         <Typography variant="body1">
-          Join "Eden Drori Business Cards" now and start connecting with
+          Join "Elisheva Segal Business Cards App" now and start connecting with
           professionals, exploring business opportunities, and growing your
           network. It's time to make your mark in the business world!
         </Typography>
