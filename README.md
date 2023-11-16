@@ -12,7 +12,7 @@ This React-based business card app provides a seamless experience for individual
 [Overview](#overview) <br>
 [Features](#features) <br>
 [Installation](#installation) <br>
-[Getting Started](#Getting Started) <br>
+[GettingStarted](#gettingStarted) <br>
 
 
 ## Overview
