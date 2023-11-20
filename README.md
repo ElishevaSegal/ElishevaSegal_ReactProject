@@ -61,7 +61,7 @@ This React-based business card app provides a seamless experience for individual
   
   ```
   
-## Getting Started:
+## GettingStarted:
 
 Join Now
 
