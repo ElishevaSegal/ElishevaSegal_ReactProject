@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Box, Container, Grid, Link, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import nextKey from "generate-my-key";
 import CardComponent from "../../components/CardComponent";
 import { useNavigate } from "react-router-dom";
@@ -14,20 +14,17 @@ import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 const HomePage = () => {
   const [dataFromServer, setDataFromServer] = useState([]);
   const [initialDataFromServer, setInitialDataFromServer] = useState([]);
-  const [refreshState, setRefhreshState] = useState("");
   const navigate = useNavigate();
   const userData = useSelector((bigPie) => bigPie.authSlice.userData);
   const query = useQueryParams();
   useEffect(() => {
-    setTimeout(() => {
-      setRefhreshState("1");
-    }, 300);
     axios
       .get("/cards")
       .then(({ data }) => {
-        if (userData) data = homePageNormalization(data, userData._id);
         setInitialDataFromServer(data);
-        setDataFromServer(data);
+        setDataFromServer(
+          homePageNormalization(data, userData && userData._id)
+        );
       })
       .catch((err) => {
         toast("Can't get the cards from server", {
@@ -41,7 +38,7 @@ const HomePage = () => {
           theme: "light",
         });
       });
-  }, [refreshState]);
+  }, []);
   useEffect(() => {
     if (!initialDataFromServer.length) return;
     const filter = query.filter ? query.filter : "";
@@ -54,7 +51,7 @@ const HomePage = () => {
     try {
       const { data } = await axios.delete("/cards/" + _id);
       setDataFromServer((dataFromServerCopy) =>
-        dataFromServerCopy.filter((card) => card._id != _id)
+        dataFromServerCopy.filter((card) => card._id !== _id)
       );
     } catch (err) {
       toast("You can only delete your cards", {
@@ -72,7 +69,7 @@ const HomePage = () => {
   const handleEditCard = async (_id) => {
     try {
       const { data } = await axios.get("/cards/" + _id);
-      if (data.user_id == userData._id || userData.isAdmin) {
+      if (data.user_id === userData._id || userData.isAdmin) {
         navigate(`${ROUTES.EDITCARD}/${_id}`);
       } else {
         toast("You can only edit your cards", {
@@ -104,7 +101,7 @@ const HomePage = () => {
       const { data } = await axios.patch("/cards/" + _id);
       setInitialDataFromServer(
         initialDataFromServer.map((card) =>
-          card._id == _id ? { ...card, likes: !card.likes } : card
+          card._id === _id ? { ...card, likes: !card.likes } : card
         )
       );
     } catch (err) {
@@ -123,7 +120,7 @@ const HomePage = () => {
   const handleLikeSuccess = (_id) => {
     setInitialDataFromServer(
       initialDataFromServer.map((card) =>
-        card._id == _id ? { ...card, likes: !card.likes } : card
+        card._id === _id ? { ...card, likes: !card.likes } : card
       )
     );
   };
