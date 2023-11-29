@@ -1,12 +1,11 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import Container from "@mui/material/Container";
 import ROUTES from "../../routes/ROUTES";
 import logo from "../../images/logo.png";
 import { Box } from "@mui/material";
-
+import { Link as RouterLink } from "react-router-dom";
 const AboutPage = () => {
   return (
     <Container
@@ -101,9 +100,9 @@ const AboutPage = () => {
           network. It's time to make your mark in the business world!
         </Typography>
 
-        <Link variant="button" href={ROUTES.REGISTER} mt={3}>
+        <RouterLink to={ROUTES.REGISTER} mt={3}>
           Create Your New Account
-        </Link>
+        </RouterLink>
       </Paper>
     </Container>
   );

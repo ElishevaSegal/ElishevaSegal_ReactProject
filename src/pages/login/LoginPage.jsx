@@ -5,6 +5,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import { Link as RouterLink } from "react-router-dom";
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
@@ -173,9 +174,9 @@ const LoginPage = () => {
             </Button>
             <Grid container>
               <Grid item>
-                <Link href={ROUTES.REGISTER} variant="body2">
+                <RouterLink to={ROUTES.REGISTER} mt={3}>
                   {"Don't have an account? Sign Up"}
-                </Link>
+                </RouterLink>
               </Grid>
             </Grid>
             <CopyrightComponent sx={{ mt: 5 }} />

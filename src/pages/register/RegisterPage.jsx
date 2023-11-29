@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
+import { Link as RouterLink } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
@@ -282,9 +282,9 @@ const RegisterPage = () => {
         </Button>
         <Grid container justifyContent="flex-end">
           <Grid item>
-            <Link href={ROUTES.LOGIN} variant="body2">
+            <RouterLink to={ROUTES.LOGIN} mt={3}>
               Already have an account? Log in
-            </Link>
+            </RouterLink>
           </Grid>
         </Grid>
       </Box>

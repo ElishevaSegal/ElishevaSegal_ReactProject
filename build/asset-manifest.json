@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ElishevaSegal_ReactProject/static/css/main.a965bf3f.css",
-    "main.js": "/ElishevaSegal_ReactProject/static/js/main.ba7d8784.js",
+    "main.js": "/ElishevaSegal_ReactProject/static/js/main.0e60db96.js",
     "static/js/787.ecf2960d.chunk.js": "/ElishevaSegal_ReactProject/static/js/787.ecf2960d.chunk.js",
     "static/media/roboto-latin-500-normal.woff2": "/ElishevaSegal_ReactProject/static/media/roboto-latin-500-normal.f25d774ecfe0996f8eb5.woff2",
     "static/media/roboto-latin-700-normal.woff2": "/ElishevaSegal_ReactProject/static/media/roboto-latin-700-normal.227c93190fe7f82de3f8.woff2",
@@ -61,11 +61,11 @@
     "static/media/roboto-greek-ext-700-normal.woff": "/ElishevaSegal_ReactProject/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "index.html": "/ElishevaSegal_ReactProject/index.html",
     "main.a965bf3f.css.map": "/ElishevaSegal_ReactProject/static/css/main.a965bf3f.css.map",
-    "main.ba7d8784.js.map": "/ElishevaSegal_ReactProject/static/js/main.ba7d8784.js.map",
+    "main.0e60db96.js.map": "/ElishevaSegal_ReactProject/static/js/main.0e60db96.js.map",
     "787.ecf2960d.chunk.js.map": "/ElishevaSegal_ReactProject/static/js/787.ecf2960d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a965bf3f.css",
-    "static/js/main.ba7d8784.js"
+    "static/js/main.0e60db96.js"
   ]
 }
