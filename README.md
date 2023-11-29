@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Elisheva Segal Business Cards App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Elisheva Segal Business Cards App, a powerful platform for professionals to connect, network, and grow their businesses.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This React-based business card app provides a seamless experience for individuals and businesses to showcase their profiles, connect with potential clients or partners, and explore new opportunities.
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[Overview](#overview) <br>
+[Features](#features) <br>
+[Installation](#installation) <br>
+[GettingStarted](#gettingStarted) <br>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Overview
 
-### `npm run build`
+This React-based business card app provides a seamless experience for individuals and businesses to showcase their profiles, connect with potential clients or partners, and explore new opportunities.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- User Registration: - User must register himself by filling some personal details.
+- User Login: After registration user will enter Email and password for logging in order to get access to the system, access token saved untill user logs out.
+- Logout: if logged in, a click on logout will remove the token from storage & log out the user.
+- Home Page: in this page articles are divided into most viewed, most popular, recent articles.
+- Business or Personal Account:
+- Define your account type as either a business or personal account based on your needs.
+- Explore Business Cards:
+- Browse through a diverse collection of business cards created by our users. Find inspiration, potential clients, or partners.
+- Interact with Cards:
+- Log in to like cards, showing your interest, and gain access to contact details of businesses.
+- Create, Edit, Delete Cards:
+- Business account holders can effortlessly create, edit, and delete their own cards to showcase services or products.
+- Favorite Cards:
+- Keep track of your liked cards in the "Favorite Cards" page for easy reference.
+-Manage Your Cards:Business account holders can view, edit, and delete their cards in the "My Cards" section.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- To run the application, you will need to have the following software installed on your computer:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  - Node.js (v12.13.0 or higher)
+    
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Once you have these dependencies installed, follow these steps:
 
-## Learn More
+  - Clone the repository.
+  - Navigate to the project directory.
+  - Open a terminal in the project directory.
+  - Run npm install to install dependencies.
+  - Run npm start to start the development server.
+  
+  <br>
+  
+  ```bash
+  npm i
+  
+  ```
+  
+## GettingStarted:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Join Now
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   - Visit the Elisheva Segal Business Cards platform.
+    - Create your account.
+   - Start connecting with professionals, exploring business opportunities, and growing your network.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
