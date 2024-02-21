@@ -61,11 +61,7 @@ const CardComponent = ({
       const { data } = await axios.patch("/cards/" + _id);
 
       onLikeSuccess(_id);
-    } catch (err) {
-      toast.info(`Somthing is wrong on server`, {
-        position: toast.POSITION.TOP_CENTER,
-      });
-    }
+    } catch (err) {}
   };
   const handleExpandClick = () => {
     setExpanded(!expanded);

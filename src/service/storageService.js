@@ -7,6 +7,7 @@ const isLocalStorage = () => {
 const storeToken = (token, rememberMe) => {
   if (rememberMe) {
     localStorage.setItem(TOKEN, token);
+    console.log(token);
   } else {
     sessionStorage.setItem(TOKEN, token);
   }

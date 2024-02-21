@@ -45,8 +45,9 @@ const LoginPage = () => {
         email: emailValue,
         password: passwordValue,
       });
-
+      console.log("token", data);
       storeToken(data, rememberMe);
+      console.log("token", data);
       toast("You logged in successfully", {
         position: "top-center",
         autoClose: 5000,

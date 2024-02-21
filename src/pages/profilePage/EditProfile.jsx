@@ -27,6 +27,7 @@ const EditProfile = () => {
     axios
       .get(`/users/${idFromToken}`)
       .then(({ data }) => {
+        console.log(data, "userdata");
         setInputsValue(editProfileNormalize(data));
       })
       .catch((err) => {

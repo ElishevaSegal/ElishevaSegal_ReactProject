@@ -10,6 +10,7 @@ import homePageNormalization from "./homePageNormalization";
 import useQueryParams from "../../hooks/useQueryParams";
 import { toast } from "react-toastify";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import { motion } from "framer-motion"; // Import motion from framer-motion for animations
 
 const HomePage = () => {
   const [dataFromServer, setDataFromServer] = useState([]);
@@ -127,25 +128,66 @@ const HomePage = () => {
 
   return (
     <Container sx={{ paddingBottom: "60px" }}>
-      <div
+      <motion.div
         style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
         }}
+        initial={{ y: -100, opacity: 0 }} // Initial animation state
+        animate={{ y: 0, opacity: 1 }} // Animation when component mounts
+        transition={{ type: "spring", stiffness: 120, damping: 10 }} // Animation configuration
       >
         <div>
           <Typography
             variant="h2"
             gutterBottom
-            sx={{ textAlign: "center", marginTop: "10%" }}
+            sx={{
+              textAlign: "center",
+              marginTop: "10%",
+              fontFamily: "Arial, sans-serif", // Change font
+            }}
           >
-            Connect, Network, Grow
+            <motion.span
+              animate={{ rotate: [0, 20, 0] }} // Animation for rotation
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }} // Animation configuration
+            >
+              Connect,{" "}
+            </motion.span>
+            <motion.span
+              animate={{ x: [0, -20, 0] }} // Animation for horizontal movement
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }} // Animation configuration
+            >
+              Network,{" "}
+            </motion.span>
+            <motion.span
+              animate={{ y: [0, 20, 0] }} // Animation for vertical movement
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }} // Animation configuration
+            >
+              Grow
+            </motion.span>
           </Typography>
           <Typography
             variant="h4"
-            sx={{ textAlign: "center", marginBottom: "7%" }}
+            sx={{
+              textAlign: "center",
+              marginBottom: "7%",
+              fontSize: "1.2rem", // Decrease font size
+              fontFamily: "Arial, sans-serif", // Change font
+            }}
           >
             Welcome to "ES BCards App, The SpringBoard For Your Business", where
             professionals and businesses come together to connect, network, and
@@ -154,15 +196,19 @@ const HomePage = () => {
             now and start making meaningful connections.
           </Typography>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <ArrowDownwardIcon fontSize="large" />
+            <ArrowDownwardIcon fontSize="large" style={{ fontSize: "2rem" }} />
           </Box>
         </div>
-      </div>
+      </motion.div>
 
       <Typography
         variant="h2"
         gutterBottom
-        sx={{ textAlign: "center", marginBottom: "3%" }}
+        sx={{
+          textAlign: "center",
+          marginBottom: "3%",
+          fontFamily: "Arial, sans-serif",
+        }} // Change font
       >
         Our Business Cards
       </Typography>
