@@ -16,6 +16,8 @@ import FilterComponent from "./ui/FilterComponent";
 import ROUTES from "../../routes/ROUTES";
 import logo from "../../images/logo.png";
 import { useNavigate } from "react-router-dom";
+import { WbSunny } from "@mui/icons-material";
+import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
 
 const HeaderComponent = ({ isDarkTheme, onThemeChange }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -153,15 +155,18 @@ const HeaderComponent = ({ isDarkTheme, onThemeChange }) => {
           <FilterComponent />
           <Box
             sx={{
+              position: "absolute",
+              right: { xs: 15, sm: 80 },
               my: 2,
               p: 1,
-              ml: { sm: 10, md: 20 },
             }}
           >
-            <Typography sx={{ display: { xs: "none", md: "inline" } }}>
-              {isDarkTheme ? "Dark" : "Light"} Mode
-            </Typography>
-            <Switch checked={isDarkTheme} onChange={handleThemeChange} />
+            <Switch
+              checked={isDarkTheme}
+              onChange={handleThemeChange}
+              icon={<WbSunny style={{ color: "white" }} />}
+              checkedIcon={<NightlightRoundIcon style={{ color: "white" }} />}
+            />
           </Box>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
