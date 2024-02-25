@@ -20,8 +20,6 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false 
-this is my workflow file, can you please help me what should i change?
-
 jobs:
   # Single deploy job since we're just deploying
   deploy:
