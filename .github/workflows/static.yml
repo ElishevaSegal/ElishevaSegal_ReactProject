@@ -20,6 +20,7 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false 
+this is my workflow file, can you please help me what should i change?
 
 jobs:
   # Single deploy job since we're just deploying
@@ -31,24 +32,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          # Update to Node.js 20
-          node-version: '20'
       - name: Setup Pages
         uses: actions/configure-pages@v3
-        with:
-          # Update to Node.js 20
-          node-version: '20'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          # Update to Node.js 20
-          node-version: '20'
           # Upload entire repository
           path: './build'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-        with:
-          # Update to Node.js 20
-          node-version: '20'
