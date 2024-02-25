@@ -10,33 +10,18 @@ on:
   workflow_dispatch:
 
 # Specifies the version of Node.js to be used in the workflow
-defaults:
-  run:
-    shell: bash
-    working-directory: ./ # Change this to the directory where your Node.js code is located
-    # Change the following line to use Node.js version 20
-    shell: bash -e {0}
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false 
-
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    env:
+      NODE_VERSION: '16.x' # Change this to '20.x' if your project requires Node.js 20
     steps:
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      # Continue with the rest of your deployment steps...
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
